@@ -113,6 +113,12 @@ export class OpenAIService {
                 return;
             }
 
+            if (event.type === "conversation.item.input_audio_transcription.failed") {
+                console.error("[server] Failed to transcribe audio");
+                console.log(JSON.stringify(event, null, 2));
+                return;
+            }
+
             if (event.type === 'response.audio.delta') {
 
                 const audio = event.delta;
@@ -140,6 +146,8 @@ export class OpenAIService {
 
                     const spotify = new SpotifyService(accessToken);
                     const results = await spotify.search(query, type);
+
+                    console.log(results);
 
                     let status = ""
 

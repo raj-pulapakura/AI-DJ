@@ -12,9 +12,7 @@ export default function DashboardPage() {
 
     return (
         <div>
-            <h1 className="text-3xl font-semibold text-center mt-10">AIDJRIEN</h1>
-            <p className="text-center">(pronounced "Adrien")</p>
-            <div className="mx-auto mt-20 w-fit">
+            <div className="mx-auto mt-32 w-fit">
                 {
                     isPlaying ?
                         <motion.div

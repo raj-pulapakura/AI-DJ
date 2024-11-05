@@ -3,6 +3,7 @@ export default function Commands() {
         <div className="w-1/4">
             <h2 className="font-bold text-xl mb-2">Available commands:</h2>
             <ul className="list-disc">
+                <li>Get available devices</li>
                 <li>Play a song/album/playlist/artist</li>
                 <li>Pause/Resume</li>
                 <li>Next/Previous</li>
